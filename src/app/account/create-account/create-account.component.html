@@ -1,0 +1,24 @@
+<body class="text-center">
+  
+    <form (ngSubmit)="onSubmit()" #form="ngForm"> 
+      <h1 class="h3 mb-3 fw-normal">Create Account</h1>
+  
+      <div class="form-floating">
+        <input type="text" class="form-control" id="name" name="name" [(ngModel)]="account.username" placeholder="username" required>
+        <label for="name">User Name</label>
+      </div>
+      <div class="form-floating">
+        <input type="email" class="form-control" id="email" name="email" [(ngModel)]="account.email" placeholder="name@example.com" required>
+        <label for="floatingInput">Email address</label>
+      </div>
+      <div class="form-floating">
+        <input type="password" class="form-control" id="password" [(ngModel)]="account.password" name="name" placeholder="Password" required>
+        <label for="password">Password</label>
+      </div>
+        <br>
+      <button class="w-100 btn btn-lg btn-primary"  type="submit">Sign in</button>
+        <br><br>
+      <a [routerLink]="['/login']">Back to Login</a>
+      <p class="mt-5 mb-3 text-muted">&copy; 2017–2021</p>
+    </form>  
+  </body>
